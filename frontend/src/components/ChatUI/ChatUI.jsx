@@ -47,44 +47,37 @@ const ChatUI = () => {
     };
 
     return (
-        <div className="chat-container">
-            <header className="chat-header">
-                LegalProConnect AI
-            </header>
+    <div className="chat-container">
+        <header className="chat-header">
+            LegalProConnect AI
+        </header>
 
-            <div className="chat-body">
-                <div className="chat-history">
-                    {chatHistory.map((message, index) => (
-                        <div key={index} className={`message ${message.type}`}>
-                            {message.text}
-                        </div>
-                    ))}
-                    
-                    {loading && (
-                        <div className="loading-spinner">
-                            <HashLoader color="#3364A8" size={40} />
-                        </div>
-                    )}
-                </div>
-
-                <div className="input-area">
-                    <div className="chat-history-display">
-                        {chatHistory.map((message, index) => (
-                            <div key={index} className={`message ${message.type}`}>
-                                {message.text}
-                            </div>
-                        ))}
+        <div className="chat-body">
+            <div className="chat-history">
+                {chatHistory.map((message, index) => (
+                    <div key={index} className={`message ${message.type}`}>
+                        {message.text}
                     </div>
-                    <textarea
-                        placeholder="Type your legal-related question..."
-                        value={userInput}
-                        onChange={handleInputChange}
-                    ></textarea>
-                    <button className="send-button" onClick={handleSendClick}>Send</button>
-                </div>
+                ))}
+                
+                {loading && (
+                    <div className="loading-spinner">
+                        <HashLoader color="#3364A8" size={40} />
+                    </div>
+                )}
+            </div>
+
+            <div className="input-area">
+                <textarea
+                    placeholder="Type your legal-related question..."
+                    value={userInput}
+                    onChange={handleInputChange}
+                ></textarea>
+                <button className="send-button" onClick={handleSendClick}>Send</button>
             </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default ChatUI;
