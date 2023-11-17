@@ -18,7 +18,7 @@ const ChatUI = () => {
         setChatHistory((prevHistory) => [...prevHistory, newMessage]);
         setUserInput('');
 
-        const apiUrl = `CLIENT_SITE_URL=http://ec2-3-82-21-179.compute-1.amazonaws.com:8080/bot/chat?prompt=${encodeURIComponent(userInput)}`;
+        const apiUrl = `http://ec2-3-82-21-179.compute-1.amazonaws.com:8080/bot/chat?prompt=${encodeURIComponent(userInput)}`;
 
         try {
             const res = await fetch(apiUrl, {
