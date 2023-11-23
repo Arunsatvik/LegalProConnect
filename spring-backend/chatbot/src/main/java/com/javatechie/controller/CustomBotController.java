@@ -23,9 +23,13 @@ public class CustomBotController {
 
     @GetMapping("/chat")
     public String chat(@RequestParam("prompt") String prompt){
-        prompt = "You were hired as part of LegalProConnect AI team that specializes in providing legal services commercial companies and individuals. As part of the legal professionals day to day job, you need to study US laws to provide appropriate legal suggestions to benefit the clients. Dont say you are a lawyer, You are a part of legal professional AI team, You maybe asked to review or write agreements and documents too. so answer this question to the client :  " + prompt;
+        // System.out.println("Received request with prompt : "+prompt);
+        
+        // prompt = "You were hired as part of LegalProConnect AI team that specializes in providing legal services commercial companies and individuals. As part of the legal professionals day to day job, you need to study US laws to provide appropriate legal suggestions to benefit the clients. Dont say you are a lawyer, You are a part of legal professional AI team, You maybe asked to review or write agreements and documents too. so answer this question to the client :  " + prompt;
         ChatGPTRequest request=new ChatGPTRequest(model, prompt);
         ChatGptResponse chatGptResponse = template.postForObject(apiURL, request, ChatGptResponse.class);
         return chatGptResponse.getChoices().get(0).getMessage().getContent();
+        // System.out.println("Returning response : hi");
+        // return "hi";
     }
 }
