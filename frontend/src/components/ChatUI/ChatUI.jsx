@@ -32,7 +32,7 @@ const ChatUI = () => {
         setUserInput('');
         //console.log("before api: " + textToSendRef.current);
 
-        const apiUrl = `https://ec2-3-82-21-179.compute-1.amazonaws.com:8080/bot/chat?prompt=${encodeURIComponent(textToSendRef.current)}`;
+        const apiUrl = `https://ec2-54-159-50-128.compute-1.amazonaws.com:8080/bot/chat?prompt=${encodeURIComponent(textToSendRef.current)}`;
 
         try {
             const res = await fetch(apiUrl, {
