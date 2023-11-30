@@ -1,0 +1,6 @@
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/ChatgptBotApplication.java
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/config/OpenAIConfig.java
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/dto/Message.java
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/dto/ChatGptResponse.java
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/dto/ChatGPTRequest.java
+/Users/SATVIK/Desktop/LegalProConnect/spring-backend/src/main/java/com/javatechie/controller/CustomBotController.java
